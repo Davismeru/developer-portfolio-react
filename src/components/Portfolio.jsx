@@ -13,7 +13,7 @@ function Portfolio() {
         },
 
         {
-            title: 'WatchFlix',
+            title: 'YFlix',
             imgSrc: 'project_2.JPG',
             description: `WatchFlix is a Video streaming platform that allows it's users to stream and download youtube videos`,
             tools: ['React Js', 'Youtube V3 API', 'Tailwind CSS', 'Vite', 'React Player library', 'React Router'],
