@@ -8,8 +8,8 @@ function Portfolio() {
             imgSrc: 'project_1.JPG',
             description: `SummariserAI is an AI based web application that summarises the contents of any website using Artificial Intelligence by just passing the url of the website`,
             tools: ['React Js', 'Vite', 'Summariser API', 'Tailwind CSS', 'React Redux(Redux-toolkit)'],
-            projectLink: 'https://google.com',
-            gitHubLink: 'https://github.com'
+            projectLink: 'https://summeriseai.pages.dev/',
+            gitHubLink: 'https://github.com/Davismeru/summariseAI-react'
         },
 
         {
@@ -17,8 +17,8 @@ function Portfolio() {
             imgSrc: 'project_2.JPG',
             description: `WatchFlix is a Video streaming platform that allows it's users to stream and download youtube videos`,
             tools: ['React Js', 'Youtube V3 API', 'Tailwind CSS', 'Vite', 'React Player library', 'React Router'],
-            projectLink: 'https://google.com',
-            gitHubLink: 'https://github.com'
+            projectLink: 'https://yflix.pages.dev/',
+            gitHubLink: 'https://github.com/Davismeru/YFLIX-react'
         },
 
         {
@@ -80,11 +80,10 @@ function Portfolio() {
                             </div>
 
                             <div className='text-blue-500 text-sm'>
-                                <a href="/" target='_blank' className='flex items-center gap-2'><FaGlobe/> View Live Project</a>
-                                <a href="/" target='_blank' className='flex items-center gap-2'><FaGithub/>View Project on Github</a>
+                                <a href={item.projectLink} target='_blank' className='flex items-center gap-2'><FaGlobe/> View Live Project</a>
+                                <a href={item.gitHubLink} target='_blank' className='flex items-center gap-2'><FaGithub/>View Project on Github</a>
                             </div>
                         </section>
-                        
                     </div>
                     </>
                 })
