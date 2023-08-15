@@ -25,18 +25,18 @@ function Portfolio() {
             title: 'Sweet Recipes',
             imgSrc: 'project_3.JPG',
             description: `Sweet Recipes is a web application that showcases different recipes from diffrerent Cuisines from all over the world`,
-            tools: ['React Js', 'Spoonacular Food API', 'Styled Components', 'Framer Motion', 'React Splide', 'React Router'],
-            projectLink: 'https://google.com',
-            gitHubLink: 'https://github.com'
+            tools: ['React Js', 'Spoonacular Food API', 'Styled Components', 'Framer Motion', 'React Router'],
+            projectLink: 'https://sweetrecipes.pages.dev/',
+            gitHubLink: 'https://github.com/Davismeru/sweet-recipes-react'
         },
 
         {
             title: 'Lyrics Arena',
             imgSrc: 'project_4.JPG',
             description: `Lyrics Arena is a lyrics web application that allows its users to save, delete and preview lyrics to their favourites songs `,
-            tools: ['React', 'JSON server', 'React Router', 'Fontawesome Icons'],
-            projectLink: 'https://google.com',
-            gitHubLink: 'https://github.com'
+            tools: ['React', 'JSON Server', 'React Router', 'Fontawesome Icons', "Render (hosting the JSON Server)"],
+            projectLink: 'https://lyricsarena.pages.dev/',
+            gitHubLink: 'https://github.com/Davismeru/lyrics-arena-react'
         },
     ]
   return (
