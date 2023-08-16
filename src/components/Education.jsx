@@ -26,7 +26,7 @@ function Education() {
           <div className='text-lg mb-5'>
             <p className='flex items-center gap-3 font-semibold text-green-600'><FaGolang/> Blog</p>
             <p>I'm also a blogger where I write articles on different topics related to technology, Artificial Intelligence, Programming and other tech stuff</p>
-            <a href="/">View Blog</a>
+            <a href="https://techcorner254.blogspot.com/" className='text-blue-500 text-sm'>View Blog</a>
           </div>
 
           {/* blogging */}

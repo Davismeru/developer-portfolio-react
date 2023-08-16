@@ -16,7 +16,7 @@ function About() {
           <section className='flex flex-col items-center md:items-start md:text-left'>
             <p className='text-lg leading-8 font-semibold text-gray-500 md:max-w-md md:text-2xl md:leading-10'>I build <span className='text-cyan-600 font-bold'>modern and interactive </span>front-end web applications using <span className='text-cyan-600 font-bold'>React Js</span> and other front-end libraries like <span className='text-cyan-600 font-bold'>TailWInd CSS</span>  </p>
             
-            <input type="button" value="Portfolio" className='bg-green-400 text-white p-1 w-24 text-center rounded-sm mt-5 md:text-xl md:p-2 md:w-28'/>
+            <a href='https://www.linkedin.com/in/davis-meru-a5320324a/' target='_blank' className='bg-green-400 text-white p-1 w-28 text-center rounded-sm mt-5 md:text-lg md:p-2 md:w-32'>LinkedIn</a>
           </section>
         </div>
     </div>
