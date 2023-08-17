@@ -11,7 +11,7 @@ function Experience() {
         </div>
 
         <div className='text-md md:text-lg md:text-center md:max-w-3xl mx-auto'>
-            <p>From years of Coding, working on numerous projects and the deep problem solving skills I've gathered when pursuing my Bachelor's Degree in Computer Science, I have developed technical skills such as programming logic, error handling, UI design, etc.  </p>
+            <p>I'm a Computer Science graduate and also a Front-end developer with 3+ years of experience in coding,  building and developing interactive websites using JavaScript and its frameworks.  I've managed to develop a deep understanding on various concepts such as DOM manipulation, Routing, APIs, State Management (using Redux), JSON, RESTful APIs, version control using Git, Design just to mention few. I also understand on what is expected from me as a front-end developer and I’m always open to learning and gathering new ideas from others who are in the same industry as me.  </p>
         </div>
 
         <div>
