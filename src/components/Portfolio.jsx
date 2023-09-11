@@ -48,12 +48,12 @@ function Portfolio() {
             <h1 className='text-xl font-bold text-cyan-600 md:text-3xl lg:text-4xl'>Portfolio</h1>
         </div>
 
-        <div className='text-lg mb-5'>
+        <div className='text-lg mb-5 md:ml-28'>
             <p>Here are some of the few projects thats I have worked on and a list of all the tools that were used in each project</p>
         </div>
 
         {/* portfolio projects container */}
-        <div>
+        <div className='md:ml-28'>
             {
                 portfolioItems.map((item, index) => {
                   return  <>
@@ -61,7 +61,7 @@ function Portfolio() {
                     <h1 className='text-xl my-5 font-semibold text-green-600 md:text-2xl' key={index}>{item.title}</h1>
                     <div key={item.title} className='mb-5 md:flex md:gap-10'>
                         {/* project image */}
-                        <section className='rounded-md p-[1px] mb-5 bg-gray-200'>
+                        <section className='rounded-md p-[1px] mb-5 bg-gray-200 md:w-[50%]'>
                             <img src={`images/${item.imgSrc}`} alt="" className='w-full h-full object-contain rounded-[inherit]'/>
                         </section>
 

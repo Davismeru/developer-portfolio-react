@@ -6,7 +6,7 @@ function Nav() {
                 <a target='_blank' href='https://github.com/Davismeru' className='flex items-center gap-2'><FaGithub/> Github</a>
                 <a target='_blank' href='https://www.linkedin.com/in/davis-meru-a5320324a/' className='flex items-center gap-2'><FaLinkedin /> LinkedIn</a>
             </section>
-            <a href='resume.pdf' download className='bg-green-400 text-white p-1 text-center rounded-sm md:w-24'>resume</a>
+            <a href='resume.pdf' download className='bg-green-400 text-white text-lg p-1 text-center rounded-sm md:w-24'>resume</a>
     </div>
   )
 }
