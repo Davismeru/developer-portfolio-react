@@ -1,55 +1,39 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div className="p-3 flex flex-col items-center text-center">
-      <p className="text-cyan-600 text-2xl font-bold md:text-4xl lg:text-6xl">
-        FULLSTACK DEVELOPER
-      </p>
-      <p className="text-lg font-semibold text-gray-700 text-center leading-3 md:text-2xl md:leading-5 xl:text-4xl xl:leading-5">
-        <br />
-        DAVIS MERU
-        <br /> <span className="text-[12px]">(Bsc Computer Science)</span>
-        <br />{" "}
-      </p>
+    <div className="about-container">
+      {/* title section */}
+      <section className="mt-12">
+        <p className="text-heading text-3xl font-bold md:text-4xl lg:text-6xl">
+          FULLSTACK DEVELOPER
+        </p>
+        <p className="text-2xl font-bold text-gray-500 text-center md:text-5xl">
+          Davis Meru
+        </p>
+      </section>
 
-      <div className="flex flex-col items-center md:flex-row md:gap-5">
-        {/* Profile picture */}
-        <section className="w-full my-10 rounded-md overflow-hidden md:w-[550px]">
-          <img
-            src="images/dev.jpg"
-            alt="profile image"
-            className="w-full h-full object-cover"
-          />
-        </section>
-
-        {/* about details */}
-        <section className="flex flex-col items-center md:items-start md:text-left">
-          <p className="text-lg leading-8 font-semibold text-gray-500 md:max-w-md md:text-2xl md:leading-10">
-            I build{" "}
-            <span className="text-cyan-600 font-bold">
-              modern, interactive, responsive and fast{" "}
-            </span>
-            UI web applications using{" "}
-            <span className="text-cyan-600 font-bold">
-              modern frameworks and libraries
-            </span>{" "}
-            such as{" "}
-            <span className="text-cyan-600 font-bold">
-              React, Node Js, Tailwind CSS
-            </span>{" "}
-            etc.{" "}
+      <section className="md:flex items-center md:mx-5 md:my-10">
+        <img
+          src="/images/dev.jpg"
+          alt="img"
+          className="object-cover md:rounded-md md:w-[600px]"
+        />
+        <div>
+          <p className="mt-5 text-2xl px-5 mb-5 md:max-w-2xl">
+            Davis is a BSc <span>Computer Science</span> graduate & also a{" "}
+            <span>full stack developer</span>, with incredible skills and
+            knowledge in the field of programming gained from years of practice
+            and building <span>Interactive</span>, <span>Responsive</span> and
+            well designed <span>UI web applications</span>.
           </p>
 
-          <a
-            href="https://www.linkedin.com/in/davis-meru-a5320324a/"
-            target="_blank"
-            className="bg-green-400 text-white p-1 w-28 text-center rounded-sm mt-5 md:text-lg md:p-2 md:w-32"
-          >
-            LinkedIn
-          </a>
-        </section>
-      </div>
+          <Link to={"/projects"}>
+            <button className="button">Projects</button>
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }

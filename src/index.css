@@ -2,13 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+.button {
+  @apply bg-buttons text-white text-xl p-2 w-32 rounded-sm;
 }
 
-.group {
-  width: 25%;
+span {
+  @apply text-spans font-medium;
 }
-.expand {
-  width: 75em;
+
+/* all sections header */
+.section-header {
+  @apply flex items-center justify-center gap-5 border p-2 rounded-md;
+}
+
+.section-header section {
+  @apply w-20 h-20 rounded-full overflow-hidden;
+}
+
+.section-header h1 {
+  @apply text-4xl font-bold text-heading md:text-3xl lg:text-4xl;
+}
+
+/* about page */
+.about-container {
+  @apply flex flex-col items-center text-center py-5 gap-5;
+}
+
+/* skills page */
+.skills-container {
+  @apply p-3;
+}
+
+.skills-container .card {
+  @apply border-none shadow-md px-5 mb-10 flex flex-col items-center gap-3 py-3 w-[80%] mx-auto md:w-[30%] md:m-0;
+}
+
+.skills-container .card div {
+  @apply flex items-center gap-5 text-2xl font-medium mb-5 md:text-xl;
+}
+
+.skills-container .card div :first-child {
+  @apply text-spans text-xl md:text-2xl;
+}
+
+/* portfolio home page */
+.projects-container {
+  @apply flex flex-wrap gap-10 py-10;
+}
+
+.projects-container section {
+  @apply cursor-pointer p-3 hover:border-b-2 rounded-md md:w-[45%];
+}
+
+.projects-container a {
+  @apply decoration-transparent;
+}
+
+.projects-container h1 {
+  @apply text-3xl font-medium mt-3 text-gray-500;
+}
+
+/* about dev */
+.about-dev {
+  @apply text-2xl mt-5 px-5 md:max-w-5xl mx-auto md:text-xl;
+}
+
+.about-dev div :first-child {
+  @apply flex gap-3 items-center text-3xl font-semibold text-orange-300;
+}
+
+.about-dev div :last-child {
+  @apply my-5;
+}
+
+/* contacts */
+.contacts {
+  @apply bg-gray-800 text-gray-50 py-10 px-5 md:flex justify-center gap-20;
+}
+
+form {
+  @apply mb-10;
+}
+
+form .btn {
+  @apply bg-white text-gray-600;
+}
+
+.contact-details {
+  @apply text-2xl md:text-xl;
+}
+
+.contact-details h1 {
+  @apply text-3xl underline underline-offset-4 mb-5 font-medium md:text-2xl;
+}
+
+.contact-details p,
+.contact-details a {
+  @apply flex items-center gap-3 mb-3;
+}
+
+/* projects page */
+.portfolio-project-container {
+  @apply px-5 py-10;
+}
+
+.project-header {
+  @apply font-bold text-3xl text-heading mb-10;
+}
+
+.project-section {
+  @apply text-2xl flex flex-col gap-5 md:flex-row md:text-xl md:items-center md:gap-10;
+}
+
+.project-section section {
+  @apply md:basis-1/2;
+}
+
+.project-section section p {
+  @apply md:max-w-xl;
+}
+.stack-tools {
+  @apply flex flex-wrap gap-5 mb-5;
+}
+
+.stack-tools h1 {
+  @apply underline underline-offset-4 font-medium;
+}
+
+.stack-tools ul {
+  @apply list-disc list-inside;
+}
+
+.project-links a {
+  @apply text-spans;
 }

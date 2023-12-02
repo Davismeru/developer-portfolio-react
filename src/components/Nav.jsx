@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 function Nav() {
   return (
-    <div className="border-b-[1px] p-3 flex justify-center items-center gap-3 font-semibold text-gray-700 text-sm md:gap-15">
+    <div className="border-b-[1px] p-7 flex justify-center items-center gap-3 font-semibold text-gray-700 text-sm md:gap-15">
       <section className="flex gap-3">
         <a
           target="_blank"
@@ -18,12 +18,8 @@ function Nav() {
           <FaLinkedin /> LinkedIn
         </a>
       </section>
-      <a
-        href="resume.pdf"
-        download
-        className="bg-gray-600 text-white text-md py-1 px-2 text-center rounded-sm md:w-24 md:px-0"
-      >
-        resume
+      <a href="resume.pdf" download>
+        <button className="button">Resume</button>
       </a>
     </div>
   );
