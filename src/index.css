@@ -64,20 +64,24 @@ span {
 
 /* about dev */
 .about-dev {
-  @apply text-2xl mt-5 px-5 md:max-w-5xl mx-auto md:text-xl;
+  @apply text-2xl md:text-xl;
 }
 
-.about-dev div :first-child {
-  @apply flex gap-3 items-center text-3xl font-semibold text-orange-300;
+.about-dev div {
+  @apply mb-5;
 }
 
-.about-dev div :last-child {
-  @apply my-5;
+.about-dev h1 {
+  @apply text-3xl font-medium text-spans md:text-2xl;
 }
 
 /* contacts */
 .contacts {
-  @apply bg-gray-800 text-gray-50 py-10 px-5 md:flex justify-center gap-20;
+  @apply py-10 px-5 md:flex justify-center gap-20;
+}
+
+.contacts h1 {
+  @apply text-3xl mb-5 italic font-medium text-gray-400;
 }
 
 form {
@@ -90,10 +94,6 @@ form .btn {
 
 .contact-details {
   @apply text-2xl md:text-xl;
-}
-
-.contact-details h1 {
-  @apply text-3xl underline underline-offset-4 mb-5 font-medium md:text-2xl;
 }
 
 .contact-details p,
@@ -134,5 +134,5 @@ form .btn {
 }
 
 .project-links a {
-  @apply text-spans;
+  @apply text-blue-500;
 }

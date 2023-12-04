@@ -24,7 +24,6 @@ function Projects() {
       <div className="project-section">
         {/*image */}
         <section>
-          {console.log(project)}
           {project.screen_shots && (
             <img
               src={`/images/screenshots/${project.screen_shots[0]}`}
@@ -59,20 +58,22 @@ function Projects() {
           {/* project links */}
 
           <section className="project-links">
-            <h1 className="font-medium underline underline-offset-4">
+            <h1 className="font-medium underline underline-offset-4 mb-2">
               Project Links
             </h1>
             {/* links */}
-            <div>
-              <p>
-                github (client): <a href="/">https//:github.com</a>
-              </p>
-              <p>
-                github (server): <a href="/">https//:github.com</a>
-              </p>
-              <p>
-                live project: <a href="/">https://live.com</a>
-              </p>
+            <div className="flex flex-col gap-2">
+              <a href={project.github_client} target="_blank">
+                github {project.github_server && "(client)"}
+              </a>
+              {project.github_server && (
+                <a href={project.github_server} target="_blank">
+                  github (server)
+                </a>
+              )}
+              <a href={project.url} target="_blank">
+                live project
+              </a>
             </div>
           </section>
         </section>

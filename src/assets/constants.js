@@ -85,8 +85,8 @@ export const projects = [
     title: "Instamedia",
     description:
       "Instamedia is a fullstack social media web application that allows its users to make posts and also like and comments on other users's posts",
-    github_client: "",
-    giithub_server: "",
+    github_client: "https://github.com/Davismeru/instapost_client",
+    github_server: "https://github.com/Davismeru/instapost_server",
     url: "https://instamedia.pages.dev",
     stack: ["React", "Node Js", "Express Js", "MySQL"],
     tools: [
@@ -111,8 +111,8 @@ export const projects = [
     title: "Survey App",
     description:
       "Survey app is a multi_step full stack web application that prompts its users to enter their data from set fields and also upload neccesary files ",
-    github_client: "",
-    giithub_server: "",
+    github_client: "https://github.com/Davismeru/simple-survey-client",
+    github_server: "https://github.com/Davismeru/simple-survey-api",
     url: "https://surveyapp.pages.dev",
     stack: ["React", "Node Js", "Express Js", "MySQL"],
     tools: [
@@ -135,8 +135,8 @@ export const projects = [
     title: "Yflix",
     description:
       "Yflix is a Video streaming platform that allows it's users to stream and download youtube videos",
-    github_client: "",
-    giithub_server: "",
+    github_client: "https://github.com/Davismeru/YFLIX-remastered-react",
+    github_server: "",
     url: "https://yflix.pages.dev",
     stack: ["React"],
     tools: ["YouTube V3 API", "React Player library", "Tailwind"],
@@ -155,11 +155,11 @@ export const projects = [
     title: "SummarizeAI",
     description:
       "SummariserAI is an AI based web application that summarises the contents of any website using Artificial Intelligence by just passing the url of the website",
-    github_client: "",
-    giithub_server: "",
-    url: "https://summerizeai.pages.dev",
+    github_client: "https://github.com/Davismeru/summariseAI-react",
+    github_server: "",
+    url: "https://summeriseai.pages.dev/",
     stack: ["React"],
-    tools: ["Summarizer API", "Redux", "Tailwind"],
+    tools: ["Article Extractor and Summarizer API", "Redux", "Tailwind"],
     screen_shots: ["ai_1.jpg", "ai_2.jpg"],
   },
 
@@ -168,8 +168,8 @@ export const projects = [
     title: "Sweet Recipes",
     description:
       "Sweet Recipes is a web application that showcases different recipes from diffrerent Cuisines from all over the world",
-    github_client: "",
-    giithub_server: "",
+    github_client: "https://github.com/Davismeru/sweet-recipes-react",
+    github_server: "",
     url: "https://sweetrecipes.pages.dev",
     stack: ["React"],
     tools: [
@@ -186,8 +186,8 @@ export const projects = [
     title: "NorthAgriTech Organisation",
     description:
       "NorthAgritech is a startup company whose main agenda is enhancing agriculture in arid and semi-arid areas of Kenya using technology",
-    github_client: "",
-    giithub_server: "",
+    github_client: "https://github.com/Davismeru/northagritech",
+    github_server: "",
     url: "https://northagritech.pages.dev",
     stack: ["React"],
     tools: ["Tailwind", "Form SUmbit tool"],
@@ -199,11 +199,24 @@ export const projects = [
     title: "Music Player Web Application",
     description:
       "A simple web based music player with functionality such as Next and previous music toggle, play and pause, shuffle through all songs, repeat one song, etc",
-    github_client: "",
-    giithub_server: "",
-    url: "",
+    github_client: "https://github.com/Davismeru/Music-Player-Web-application",
+    github_server: "",
+    url: "https://davismeru.github.io/Music-Player-Web-application/",
     stack: ["HTML5", "CSS3", "JavaScript"],
     tools: ["Giphy", "UnSplash"],
     screen_shots: ["music_1.jpg", "music_2.jpg", "music_3.jpg"],
+  },
+
+  {
+    id: 8,
+    title: "Royce Scents",
+    description:
+      "Royce Scents is an individual-owned company that deals with selling of products such as perfumes, bracelets, shades, etc. This website simply shows some of the products that the company sells.",
+    github_client: "https://github.com/Davismeru/ROYCE-PERFUME-STORE",
+    github_server: "",
+    url: "https://davismeru.github.io/ROYCE-PERFUME-STORE/",
+    stack: ["HTML5", "CSS3", "JavaScript"],
+    tools: ["UnSplash", "JSON raw data", "Fontawesome 6"],
+    screen_shots: ["royce_1.jpg", "royce_2.jpg", "royce_3.jpg"],
   },
 ];
