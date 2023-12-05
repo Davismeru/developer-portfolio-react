@@ -81,7 +81,7 @@ span {
 }
 
 .contacts h1 {
-  @apply text-3xl mb-5 italic font-medium text-gray-400;
+  @apply text-3xl mb-5 italic font-medium text-gray-400 md:text-2xl;
 }
 
 form {

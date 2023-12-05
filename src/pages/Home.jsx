@@ -12,7 +12,6 @@ function Home() {
       <Skills />
       <Portfolio />
       <AboutDev />
-      <Contacts />
     </div>
   );
 }

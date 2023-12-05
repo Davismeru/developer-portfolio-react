@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 function About() {
   return (
@@ -29,9 +29,9 @@ function About() {
             well designed <span>UI web applications</span>.
           </p>
 
-          <Link to={"/projects"}>
+          <ScrollLink to={"portfolio"} smooth={true}>
             <button className="button">Projects</button>
-          </Link>
+          </ScrollLink>
         </div>
       </section>
     </div>

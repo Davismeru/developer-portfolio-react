@@ -11,7 +11,7 @@ function Contacts() {
     <>
       <div className="section-header">
         <section>
-          <img src="images/nerd.jpg" alt="img" />
+          <img src="/images/nerd.jpg" alt="img" />
         </section>
         <h1>Get In Touch</h1>
       </div>

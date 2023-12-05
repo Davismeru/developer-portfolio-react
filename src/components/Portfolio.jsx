@@ -1,10 +1,11 @@
 import { GoFileCode } from "react-icons/go";
 import { projects } from "../assets/constants";
 import { Link } from "react-router-dom";
+import { Element } from "react-scroll";
 
 function Portfolio() {
   return (
-    <div className="p-3">
+    <Element className="p-3" name="portfolio">
       <div className="section-header">
         <section className="flex items-center justify-center border-[1px] text-4xl">
           <GoFileCode />
@@ -15,7 +16,7 @@ function Portfolio() {
       {/* projects */}
       <div className="projects-container">
         {projects.map((project) => (
-          <section>
+          <section key={project.id}>
             <Link to={`/projects/${project.title}`}>
               <img
                 src={`/images/screenshots/${project.screen_shots[0]}`}
@@ -27,7 +28,7 @@ function Portfolio() {
           </section>
         ))}
       </div>
-    </div>
+    </Element>
   );
 }
 
