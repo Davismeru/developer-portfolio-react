@@ -28,6 +28,11 @@ span {
   @apply flex flex-col items-center text-center py-5 gap-5;
 }
 
+/* intro video section */
+.play-btn {
+  @apply absolute left-1/2 top-1/2 text-7xl -translate-x-1/2 -translate-y-1/2 text-[#300e0e] z-20;
+}
+
 /* skills page */
 .skills-container {
   @apply p-3;

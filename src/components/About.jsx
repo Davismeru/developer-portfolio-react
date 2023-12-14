@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import { IoPlay, IoPause } from "react-icons/io5";
 
 function About() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  // play/pause video
+  const video = document.getElementById("video");
+  const handlePlay = () => {
+    if (!isPlaying) {
+      setIsPlaying(true);
+      video.play();
+    } else {
+      setIsPlaying(false);
+      video.pause();
+      video.end(console.log("true"));
+    }
+  };
+
   return (
     <div className="about-container">
       {/* title section */}
@@ -33,6 +49,20 @@ function About() {
             <button className="button">Projects</button>
           </ScrollLink>
         </div>
+      </section>
+
+      {/* intro video */}
+      <section
+        className="px-5 my-10 relative cursor-pointer"
+        onClick={handlePlay}
+      >
+        {/* play btn */}
+        <section className="play-btn">{!isPlaying && <IoPlay />}</section>
+        <video
+          src="/intro.mp4"
+          className="rounded-md md:w-[600px] shadow-2xl"
+          id="video"
+        />
       </section>
     </div>
   );
