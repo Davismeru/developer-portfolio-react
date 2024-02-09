@@ -82,6 +82,35 @@ export const skills = [
 export const projects = [
   {
     id: 1,
+    title: "MegaSurveys",
+    description:
+      "MegaSurveys is a fullstack web application that allows clients to post surveys and freelancers to find and respond to the posted surveys",
+    github_client: "https://github.com/Davismeru/megasurveys-client",
+    github_server: "https://github.com/Davismeru/megasurveys-server",
+    url: "https://megasurveys.pages.dev",
+    stack: ["React", "Node Js", "Express Js", "MySQL"],
+    tools: [
+      "Heroku (server deployment)",
+      "Clever cloud",
+      "Cloudflare pages (frontend deployment)",
+      "Sequelize ORM",
+      "JSON Web Token",
+      "Multer",
+      "Bcrypt",
+    ],
+    screen_shots: [
+      "capture 1.png",
+      "capture 2.png",
+      "capture 3.png",
+      "capture 4.png",
+      "capture 5.png",
+      "capture 6.png",
+      "capture 7.png",
+    ],
+  },
+
+  {
+    id: 2,
     title: "Instamedia",
     description:
       "Instamedia is a fullstack social media web application that allows its users to make posts and also like and comments on other users's posts",
@@ -107,7 +136,7 @@ export const projects = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "Survey App",
     description:
       "Survey app is a multi_step full stack web application that prompts its users to enter their data from set fields and also upload neccesary files ",
@@ -131,7 +160,7 @@ export const projects = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Yflix",
     description:
       "Yflix is a Video streaming platform that allows it's users to stream and download youtube videos",
@@ -151,7 +180,7 @@ export const projects = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "SummarizeAI",
     description:
       "SummariserAI is an AI based web application that summarises the contents of any website using Artificial Intelligence by just passing the url of the website",
@@ -164,7 +193,7 @@ export const projects = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: "Sweet Recipes",
     description:
       "Sweet Recipes is a web application that showcases different recipes from diffrerent Cuisines from all over the world",
@@ -182,7 +211,7 @@ export const projects = [
   },
 
   {
-    id: 6,
+    id: 7,
     title: "NorthAgriTech Organisation",
     description:
       "NorthAgritech is a startup company whose main agenda is enhancing agriculture in arid and semi-arid areas of Kenya using technology",
@@ -195,7 +224,7 @@ export const projects = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Music Player Web Application",
     description:
       "A simple web based music player with functionality such as Next and previous music toggle, play and pause, shuffle through all songs, repeat one song, etc",
@@ -208,7 +237,7 @@ export const projects = [
   },
 
   {
-    id: 8,
+    id: 9,
     title: "Royce Scents",
     description:
       "Royce Scents is an individual-owned company that deals with selling of products such as perfumes, bracelets, shades, etc. This website simply shows some of the products that the company sells.",
