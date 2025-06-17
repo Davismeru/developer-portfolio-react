@@ -1,80 +1,261 @@
+import { FaGraduationCap, FaBook, FaRocket } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { useState } from "react";
-import {
-  FaGolang,
-  FaGraduationCap,
-  FaMandalorian,
-  FaPersonArrowUpFromLine,
-} from "react-icons/fa6";
+
+// Timeline data
+const timelineItems = [
+  { year: "2018", event: "Started Computer Science degree" },
+  { year: "2020", event: "First freelance web project" },
+  { year: "2022", event: "Internship at Tech Company" },
+  { year: "2023", event: "Graduated with BSc in CS" }
+];
+
+// Fun facts (for carousel)
+const funFacts = [
+  "Built a TODO app in 10 different frameworks to compare them!",
+  "Can recite the first 50 digits of π while debugging CSS",
+  "Once fixed a production bug while on safari (literally)"
+];
 
 function AboutDev() {
+  const [currentFact, setCurrentFact] = useState(0);
+
+  // Rotate fun facts every 5 seconds
+  useState(() => {
+    const interval = setInterval(() => {
+      setCurrentFact((prev) => (prev + 1) % funFacts.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const sections = [
+    {
+      icon: <FaRocket className="text-teal-500 text-2xl" />,
+      title: "Who I Am",
+      content: "A passionate full-stack developer and lifelong learner obsessed with web technologies. I thrive at the intersection of creativity and logic, building solutions that are both beautiful and functional.",
+    },
+    {
+      icon: <FaRocket className="text-blue-500 text-2xl" />,
+      title: "My Goals",
+      content: "To master the art of building intuitive, performant applications while staying ahead of tech trends. I dedicate time daily to learning - whether it's a new framework, design pattern, or optimization technique.",
+    },
+    {
+      icon: <FaBook className="text-purple-500 text-2xl" />,
+      title: "Blogging",
+      content: "I share my learning journey through articles on web development, AI, and tech trends. Writing helps me solidify knowledge while contributing to the community.",
+      link: {
+        text: "Visit My Blog",
+        url: "https://techcorner254.blogspot.com/"
+      }
+    },
+    {
+      icon: <FaGraduationCap className="text-orange-500 text-2xl" />,
+      title: "Education",
+      content: "BSc in Computer Science from Garissa University (2018-2023). My academic journey fueled my passion for solving real-world problems through technology.",
+    }
+  ];
+
   return (
-    <div className="p-3">
-      <div className="section-header">
-        <section>
-          <img src="images/nerd.jpg" alt="img" />
-        </section>
-        <h1>Know the dev</h1>
-      </div>
+    <section id="about-dev" className="max-w-6xl mx-auto px-5 py-20 bg-gray-50 rounded-xl my-10">
+      {/* Header */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="flex flex-col md:flex-row items-center gap-8 mb-16"
+      >
+        <div className="relative group w-32 h-32 md:w-40 md:h-40">
+          <img 
+            src="/images/nerd.jpg" 
+            alt="Davis Meru" 
+            className="w-full h-full object-cover rounded-full border-4 border-white shadow-lg"
+          />
+          <div className="absolute inset-0 rounded-full border-2 border-teal-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        </div>
+        <div>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent">
+            Beyond the Code
+          </h2>
+          <p className="text-gray-600 mt-3">
+            Get to know the person behind the commits
+          </p>
+        </div>
+      </motion.div>
 
-      <div className="mt-10 md:flex items-center">
-        {/* dev image */}
-        <section className="px-5">
-          <img src="/images/davis.jpg" alt="img" className="rounded-md mb-5" />
-        </section>
-        {/* about dev details */}
-        <div className="about-dev">
-          {/* about */}
-          <div>
-            <p>
-              Davis is just your average IT nerd who loves everything to do with
-              computing, learning new stuff, mostly thing related to web
-              development, learning new tech trends and ensuring that I enhance
-              my skills everyday
-            </p>
-          </div>
+      {/* Content Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Left Column */}
+        <div className="space-y-8">
+          {/* Image Section */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <img 
+              src="/images/davis.jpg" 
+              alt="Davis working" 
+              className="rounded-xl shadow-md w-full h-auto object-cover border border-gray-200"
+            />
+          </motion.div>
 
-          <div>
-            <h1>Goals</h1>
-            <p>
-              My Goal is to be the best in what I do. To achieve this, I ensure
-              that no day passes without learning something new. Web development
-              is very broad and evolving and I have to ensure that I keep up
-              with the trends so that I can deliver the best
+          {/* Fun Fact Carousel */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
+            className="p-4 bg-teal-50 rounded-lg border border-teal-100 relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 w-full h-1 bg-teal-200">
+              <motion.div
+                animate={{ width: ["0%", "100%"] }}
+                transition={{ duration: 5, repeat: Infinity }}
+                className="h-full bg-teal-500"
+              />
+            </div>
+            <p className="text-center italic pt-3">
+              <span className="font-bold">Fun Fact:</span> {funFacts[currentFact]}
             </p>
-          </div>
+          </motion.div>
 
-          {/* blogging */}
-          <div>
-            <h1>Blog</h1>
-            <p>
-              I'm also a blogger where I write articles on different topics
-              related to technology, Artificial Intelligence, Programming and
-              other tech stuff
-            </p>
-            <a
-              href="https://techcorner254.blogspot.com/"
-              target="_blank"
-              className="text-blue-500 text-2xl md:text-xl"
+          {/* Tech Passion Meter */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            viewport={{ once: true }}
+            className="bg-white p-6 rounded-lg shadow-sm border border-gray-100"
+          >
+            <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-purple-500 animate-pulse"></div>
+              Current Tech Focus
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <div className="flex justify-between text-sm mb-1">
+                  <span>WebAssembly</span>
+                  <span>80%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div 
+                    className="bg-purple-500 h-2 rounded-full" 
+                    style={{ width: "80%" }}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between text-sm mb-1">
+                  <span>React Server Components</span>
+                  <span>65%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div 
+                    className="bg-blue-500 h-2 rounded-full" 
+                    style={{ width: "65%" }}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between text-sm mb-1">
+                  <span>Edge Computing</span>
+                  <span>45%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div 
+                    className="bg-teal-500 h-2 rounded-full" 
+                    style={{ width: "45%" }}
+                  />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Right Column */}
+        <div className="space-y-8">
+          {/* Info Sections */}
+          {sections.map((section, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-teal-200 transition-all"
             >
-              View Blog
-            </a>
-          </div>
+              <div className="flex gap-4 items-start">
+                <div className="p-3 bg-gray-50 rounded-full">
+                  {section.icon}
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">{section.title}</h3>
+                  <p className="text-gray-600 mb-3">{section.content}</p>
+                  {section.link && (
+                    <a 
+                      href={section.link.url} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-teal-600 hover:text-teal-800 font-medium"
+                    >
+                      {section.link.text} →
+                    </a>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          ))}
 
-          {/* education */}
-          <div>
-            <h1>Education</h1>
-            <p>
-              My intrests and passion in technology and computing led me to
-              pursuing a Bachelor's Degree in Computer Science course from 2018
-              and graduated in 2023 at Garissa University, Kenya.
-            </p>
-          </div>
-          <a href="resume.pdf" download>
-            <button className="button mt-3">Resume</button>
-          </a>
+          {/* Milestone Timeline */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            viewport={{ once: true }}
+            className="bg-white p-6 rounded-lg shadow-sm border border-gray-100"
+          >
+            <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+              Career Timeline
+            </h3>
+            <div className="border-l-2 border-gray-200 pl-6 space-y-8">
+              {timelineItems.map((item, i) => (
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 * i }}
+                  viewport={{ once: true }}
+                  className="relative"
+                >
+                  <div className="absolute -left-8 top-0 w-4 h-4 rounded-full bg-teal-500 border-4 border-white"></div>
+                  <p className="text-sm text-gray-500">{item.year}</p>
+                  <p className="font-medium">{item.event}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Resume Button */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <a 
+              href="resume.pdf" 
+              download
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-teal-500 to-blue-600 text-white rounded-lg hover:opacity-90 transition-opacity shadow-md w-full justify-center"
+            >
+              Download Full Resume
+            </a>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
