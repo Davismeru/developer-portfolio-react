@@ -11,15 +11,6 @@ const timelineItems = [
 ];
 
 function AboutDev() {
-  const [currentFact, setCurrentFact] = useState(0);
-
-  // Rotate fun facts every 5 seconds
-  useState(() => {
-    const interval = setInterval(() => {
-      setCurrentFact((prev) => (prev + 1) % funFacts.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   const sections = [
     {
