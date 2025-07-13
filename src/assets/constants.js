@@ -100,8 +100,8 @@ const project_details = [{
         description: "SayIt is a full-stack MERN web application enabling anonymous real-time messaging. It leverages Socket.IO for live chat, with users sharing a unique public link to receive and respond to messages, while preserving sender anonymity throughout the conversation.",
         github_client: "https://github.com/Davismeru/sayit_client",
         github_server: "https://github.com/Davismeru/sayit_server",
-        url: "https://sayit-anoymous.pages.dev",
-        stack: ["React", "Node Js", "Socket.io", "MongoDB", "Tailwind CSS"],
+        url: "https://sayit-kkk.pages.dev",
+        stack: ["React", "Node s", "Socket.io", "MongoDB", "Tailwind CSS"],
         tools: [
             "Socket.io",
             "Framer motion",
